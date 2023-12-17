@@ -1,0 +1,8 @@
+#!/usr/bin/env fish
+
+set -l script (basename $PWD) 
+
+swiftc -enable-bare-slash-regex $script.swift
+if [ $status -eq 0 ]
+    ./$script
+end
